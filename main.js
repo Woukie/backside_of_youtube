@@ -131,7 +131,7 @@ function rebuildQueryDropdown() {
 }
 
 function updateSelectedQueries() {
-  previousQueries = selectedQueries;
+  previousQueries = Array.from(selectedQueries);
   const selectedQueryIndexes = queryDropdown.hasAttribute("value")
     ? queryDropdown
         .getAttribute("value")
@@ -146,11 +146,15 @@ function updateSelectedQueries() {
 }
 
 function rebuildInputs() {
-  inputsParent.innerHTML = "";
+  let toRemove = new Set();
+  for (let i = 0; i < inputsParent.children.length; i++) {
+    toRemove.add(inputsParent.children[i]);
+  }
 
   selectedQueries.forEach((selectedQuery, idx) => {
     selectedQuery.getInputs().forEach((input) => {
       let duplicateInput = null;
+
       for (let i = 0; i < idx; i++) {
         duplicateInput = selectedQueries
           .at(i)
@@ -161,13 +165,37 @@ function rebuildInputs() {
         }
       }
 
+      let cloned = false;
+      if (!duplicateInput && previousQueries) {
+        for (let i = 0; i < previousQueries.length; i++) {
+          duplicateInput = previousQueries
+            .at(i)
+            .getInputs()
+            .find(
+              (previousInput) =>
+                previousInput.equals(input) && previousInput.getResultElement()
+            );
+          if (duplicateInput) {
+            cloned = true;
+            break;
+          }
+        }
+      }
+
       if (duplicateInput) {
-        input.setResultElement(duplicateInput.getResultElement());
+        let oldElement = duplicateInput.getResultElement();
+        input.setResultElement(oldElement);
+        toRemove.delete(oldElement);
         const dependentList = duplicateInput
           .getResultElement()
           .getElementsByClassName("requiredBy")[0];
-        if (dependentList)
-          dependentList.innerText += ", " + selectedQuery.getName();
+        if (dependentList) {
+          if (cloned) {
+            dependentList.innerText = "Used by " + selectedQuery.getName();
+          } else {
+            dependentList.innerText += ", " + selectedQuery.getName();
+          }
+        }
       } else {
         const inputParent = document.createElement("div");
         inputParent.innerHTML = input.createHTML();
@@ -180,6 +208,8 @@ function rebuildInputs() {
       }
     });
   });
+
+  toRemove.forEach((element) => element.remove());
 
   if (!inputsParent.firstChild) {
     const noneMessage = document.createElement("p");
