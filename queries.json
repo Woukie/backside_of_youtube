@@ -1,0 +1,831 @@
+﻿{
+  "queries": [
+    {
+      "name": "IMG",
+      "query": "IMG",
+      "tags": ["Camera", "New Videos"]
+    },
+    {
+      "name": "MVI",
+      "query": "MVI",
+      "tags": ["Camera", "New Videos"]
+    },
+    {
+      "name": "(YMD)",
+      "query": "%1%2%3",
+      "tags": ["Camera", "New Videos", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Year",
+          "placeholder": "%1",
+          "max": 2025,
+          "defaultMin": 2000,
+          "defaultMax": 2025
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Month",
+          "placeholder": "%2",
+          "min": 1,
+          "max": 12
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Day",
+          "placeholder": "%3",
+          "min": 1,
+          "max": 31
+        }
+      ]
+    },
+    {
+      "name": "(MDY)",
+      "query": "%2%1%3",
+      "tags": ["Camera", "New Videos", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Year",
+          "placeholder": "%1",
+          "max": 2025,
+          "defaultMin": 2000,
+          "defaultMax": 2025
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Month",
+          "placeholder": "%2",
+          "min": 1,
+          "max": 12
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Day",
+          "placeholder": "%3",
+          "min": 1,
+          "max": 31
+        }
+      ]
+    },
+    {
+      "name": "(DMY)",
+      "query": "%3%2%1",
+      "tags": ["Camera", "New Videos", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Year",
+          "placeholder": "%1",
+          "max": 2025,
+          "defaultMin": 2000,
+          "defaultMax": 2025
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Month",
+          "placeholder": "%2",
+          "min": 1,
+          "max": 12
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Day",
+          "placeholder": "%3",
+          "min": 1,
+          "max": 31
+        }
+      ]
+    },
+    {
+      "name": "WIN (YMD)",
+      "query": "WIN %1%2%3",
+      "tags": ["Webcam", "New Videos", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Year",
+          "placeholder": "%1",
+          "max": 2025,
+          "defaultMin": 2000,
+          "defaultMax": 2025
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Month",
+          "placeholder": "%2",
+          "min": 1,
+          "max": 12
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Day",
+          "placeholder": "%3",
+          "min": 1,
+          "max": 31
+        }
+      ]
+    },
+    {
+      "name": "VID (YMD)",
+      "query": "VID %1%2%3",
+      "tags": ["Webcam", "New Videos", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Year",
+          "placeholder": "%1",
+          "max": 2025,
+          "defaultMin": 2000,
+          "defaultMax": 2025
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Month",
+          "placeholder": "%2",
+          "min": 1,
+          "max": 12
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Day",
+          "placeholder": "%3",
+          "min": 1,
+          "max": 31
+        }
+      ]
+    },
+    {
+      "name": "Capture (YMD)",
+      "query": "Capture %1%2%3",
+      "tags": ["Webcam", "New Videos", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Year",
+          "placeholder": "%1",
+          "max": 2025,
+          "defaultMin": 2000,
+          "defaultMax": 2025
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Month",
+          "placeholder": "%2",
+          "min": 1,
+          "max": 12
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Day",
+          "placeholder": "%3",
+          "min": 1,
+          "max": 31
+        }
+      ]
+    },
+    {
+      "name": "My Movie",
+      "query": "My Movie",
+      "tags": ["Video Editor", "New Videos"]
+    },
+    {
+      "name": "My Edited Video",
+      "query": "My Edited Video",
+      "tags": ["Video Editor", "New Videos"]
+    },
+    {
+      "name": "/Storage/Emulated/",
+      "query": "/Storage/Emulated/",
+      "tags": ["Video Editor", "Photo Albums", "New Videos"]
+    },
+    {
+      "name": "PXL",
+      "query": "PXL",
+      "tags": ["Smartphone", "Google Pixel", "New Videos"]
+    },
+    {
+      "name": "InShot (YMD)",
+      "query": "InShot %1%2%3",
+      "tags": ["Smartphone", "New Videos", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Year",
+          "placeholder": "%1",
+          "max": 2025,
+          "defaultMin": 2000,
+          "defaultMax": 2025
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Month",
+          "placeholder": "%2",
+          "min": 1,
+          "max": 12
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Day",
+          "placeholder": "%3",
+          "min": 1,
+          "max": 31
+        }
+      ]
+    },
+    {
+      "name": "WhatsApp Video (Y)",
+      "query": "WhatsApp Video %1",
+      "tags": ["Smartphone", "New Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Year",
+          "placeholder": "%1",
+          "max": 2025,
+          "defaultMin": 2000,
+          "defaultMax": 2025
+        }
+      ]
+    },
+    {
+      "name": "FullSizeRender",
+      "query": "FullSizeRender",
+      "tags": ["Smartphone", "New Videos"]
+    },
+    {
+      "name": "RPReplay",
+      "query": "RPReplay",
+      "tags": ["Screen Recording", "New Videos"]
+    },
+    {
+      "name": "VTS 01",
+      "query": "VTS 01",
+      "tags": ["DVD", "New Videos"]
+    },
+    {
+      "name": "DVR",
+      "query": "DVR",
+      "tags": ["Game Capture", "New Videos"]
+    },
+    {
+      "name": "SWF",
+      "query": "SWF",
+      "tags": ["Game Capture", "New Videos"]
+    },
+    {
+      "name": "VLC Record",
+      "query": "VLC Record",
+      "tags": ["Game Capture", "New Videos"]
+    },
+    {
+      "name": "Robloxapp",
+      "query": "Robloxapp",
+      "tags": ["Game Capture", "New Videos"]
+    },
+    {
+      "name": ".MP4",
+      "query": ".MP4",
+      "tags": ["Filename Extension", "New Videos"]
+    },
+    {
+      "name": ".3PG",
+      "query": ".3PG",
+      "tags": ["Filename Extension", "New Videos"]
+    },
+    {
+      "name": ".MOV",
+      "query": ".MOV",
+      "tags": ["Filename Extension", "New Videos"]
+    },
+    {
+      "name": ".AVI",
+      "query": ".AVI",
+      "tags": ["Filename Extension", "New Videos"]
+    },
+    {
+      "name": ".WMV",
+      "query": ".WMV",
+      "tags": ["Filename Extension", "New Videos"]
+    },
+    {
+      "name": ".MKV",
+      "query": ".MKV",
+      "tags": ["Filename Extension", "Mostly Spam", "New Videos"]
+    },
+    {
+      "name": ".MPEG",
+      "query": ".MPEG",
+      "tags": ["Filename Extension", "Mostly Spam", "New Videos"]
+    },
+    {
+      "name": ".FLV",
+      "query": ".FLV",
+      "tags": ["Filename Extension", "Mostly Spam", "New Videos"]
+    },
+    {
+      "name": ".FLAC",
+      "query": ".FLAC",
+      "tags": ["Filename Extension", "Copyrighted Music", "New Videos"]
+    },
+    {
+      "name": ".WAV",
+      "query": ".WAV",
+      "tags": ["Filename Extension", "User-Created Music", "New Videos"]
+    },
+    {
+      "name": "IMG XXXX",
+      "query": "IMG %1",
+      "tags": ["Misc", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 9999
+        }
+      ]
+    },
+    {
+      "name": "MVI XXXX",
+      "query": "MVI %1",
+      "tags": ["Misc", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 9999
+        }
+      ]
+    },
+    {
+      "name": "MOV XXXX",
+      "query": "MOV %1",
+      "tags": ["Camera", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 9999
+        }
+      ]
+    },
+    {
+      "name": "100 XXXX",
+      "query": "100 %1",
+      "tags": ["Camera", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 9999
+        }
+      ]
+    },
+    {
+      "name": "SAM XXXX",
+      "query": "SAM %1",
+      "tags": ["Camera", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 9999
+        }
+      ]
+    },
+    {
+      "name": "DSC XXXX",
+      "query": "DSC %1",
+      "tags": ["Camera", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 9999
+        }
+      ]
+    },
+    {
+      "name": "SDV XXXX",
+      "query": "SDV %1",
+      "tags": ["Camera", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 9999
+        }
+      ]
+    },
+    {
+      "name": "DSCFXXXX",
+      "query": "DSCF%1",
+      "tags": ["Camera", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 9999
+        }
+      ]
+    },
+    {
+      "name": "DSCNXXXX",
+      "query": "DSCN%1",
+      "tags": ["Camera", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 9999
+        }
+      ]
+    },
+    {
+      "name": "PICTXXXX",
+      "query": "PICT%1",
+      "tags": ["Camera", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 9999
+        }
+      ]
+    },
+    {
+      "name": "MAQ0XXXX",
+      "query": "MAQ0%1",
+      "tags": ["Camera", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 9999
+        }
+      ]
+    },
+    {
+      "name": "FILEXXXX",
+      "query": "FILE%1",
+      "tags": ["Dashcam", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 9999
+        }
+      ]
+    },
+    {
+      "name": "GOPRXXXX",
+      "query": "GOPR%1",
+      "tags": ["GoPro", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 9999
+        }
+      ]
+    },
+    {
+      "name": "GP01XXXX",
+      "query": "GP01%1",
+      "tags": ["GoPro", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 9999
+        }
+      ]
+    },
+    {
+      "name": "GX01XXXX",
+      "query": "GX01%1",
+      "tags": ["GoPro", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 9999
+        }
+      ]
+    },
+    {
+      "name": "GX01XXXX",
+      "query": "GX01%1",
+      "tags": ["GoPro", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 9999
+        }
+      ]
+    },
+    {
+      "name": "DJI XXXX",
+      "query": "DJI %1",
+      "tags": ["Drone", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 9999
+        }
+      ]
+    },
+    {
+      "name": "HNI 0XXX",
+      "query": "HNI 0%1",
+      "tags": ["Nintendo DS", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 100
+        }
+      ]
+    },
+    {
+      "name": "WA0XXX",
+      "query": "HNI 0%1",
+      "tags": ["Misc", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 999
+        }
+      ]
+    },
+    {
+      "name": "MOL0XX (A-F, 0-9)",
+      "query": "MOL0%1%2",
+      "tags": ["Camera", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeCharacter",
+          "name": "Character",
+          "placeholder": "%1",
+          "count": 1,
+          "min": "A",
+          "max": "F"
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%2",
+          "max": 9
+        }
+      ]
+    },
+    {
+      "name": "MOL0XX (00-99)",
+      "query": "MOL0%1",
+      "tags": ["Camera", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 99
+        }
+      ]
+    },
+    {
+      "name": "(HMS)",
+      "query": "%1%2%3",
+      "tags": ["Misc", "Time of Day", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Hour",
+          "placeholder": "%1",
+          "max": 23
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Minute",
+          "placeholder": "%2",
+          "max": 59
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Second",
+          "placeholder": "%3",
+          "max": 59
+        }
+      ]
+    },
+    {
+      "name": "P10XXXXX",
+      "query": "P10%1",
+      "tags": ["Camera", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 99999,
+          "defaultMax": 19999
+        }
+      ]
+    },
+    {
+      "name": "VTS XX X",
+      "query": "VTS %1 %2",
+      "tags": ["Misc", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 99
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%2",
+          "max": 9
+        }
+      ]
+    },
+    {
+      "name": "VTS XXX 1",
+      "query": "VTS %1 1",
+      "tags": ["Misc", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 999
+        }
+      ]
+    },
+    {
+      "name": "VTS 01 XXX",
+      "query": "VTS 01 %1",
+      "tags": ["Misc", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 999
+        }
+      ]
+    },
+    {
+      "name": "My Slideshow",
+      "query": "My Slideshow",
+      "tags": ["Video Editor", "Old Videos"]
+    },
+    {
+      "name": "My Slideshow XX",
+      "query": "My Slideshow %1",
+      "tags": ["Video Editor", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 99
+        }
+      ]
+    },
+    {
+      "name": "My Slideshow Video",
+      "query": "My Slideshow Video",
+      "tags": ["Video Editor", "Old Videos"]
+    },
+    {
+      "name": "My Stupeflix Video",
+      "query": "My Stupeflix Video",
+      "tags": ["Video Editor", "Old Videos"]
+    },
+    {
+      "name": "My Stupeflix XXXX",
+      "query": "My Stupeflix %1",
+      "tags": ["Video Editor", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Number",
+          "placeholder": "%1",
+          "max": 1050
+        }
+      ]
+    },
+    {
+      "name": "AUD-(YMD)",
+      "query": "AUD-%1%2%3",
+      "tags": ["Misc", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Year",
+          "placeholder": "%1",
+          "max": 2025,
+          "defaultMin": 2000,
+          "defaultMax": 2025
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Month",
+          "placeholder": "%2",
+          "min": 1,
+          "max": 12
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Day",
+          "placeholder": "%3",
+          "min": 1,
+          "max": 31
+        }
+      ]
+    },
+    {
+      "name": "PXL (YMD)",
+      "query": "PXL %1%2%3",
+      "tags": ["Misc", "Old Videos"],
+      "inputs": [
+        {
+          "type": "RangeNumber",
+          "name": "Year",
+          "placeholder": "%1",
+          "max": 2025,
+          "defaultMin": 2000,
+          "defaultMax": 2025
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Month",
+          "placeholder": "%2",
+          "min": 1,
+          "max": 12
+        },
+        {
+          "type": "RangeNumber",
+          "name": "Day",
+          "placeholder": "%3",
+          "min": 1,
+          "max": 31
+        }
+      ]
+    },
+    {
+      "name": "240P 400K",
+      "query": "240P 400K",
+      "tags": ["Misc", "NSFW", "Old Videos"]
+    },
+    {
+      "name": "480P 100K",
+      "query": "480P 100K",
+      "tags": ["Misc", "NSFW", "Old Videos"]
+    },
+    {
+      "name": "480P 600K",
+      "query": "480P 600K",
+      "tags": ["Misc", "NSFW", "Old Videos"]
+    },
+    {
+      "name": "480P 2000K",
+      "query": "480P 2000K",
+      "tags": ["Misc", "NSFW", "Old Videos"]
+    },
+    {
+      "name": "720P 1500K",
+      "query": "720P 1500K",
+      "tags": ["Misc", "NSFW", "Old Videos"]
+    },
+    {
+      "name": "720P 4000K",
+      "query": "720P 4000K",
+      "tags": ["Misc", "NSFW", "Old Videos"]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+﻿@font-face {
+  font-family: Px437_IBM_VGA_8x16;
+  src: url("Px437_IBM_VGA_8x16.ttf");
+  src: url("WebPlus_IBM_VGA_8x16.woff") format("woff");
+}
+
+html {
+  color: #ccc;
+  background-color: black;
+  font-family: "Px437_IBM_VGA_8x16";
+}
+
+.container {
+  width: 1152px;
+  height: 672px;
+  position: absolute;
+  border-image: url("./border.png") 16 8 16 8 fill / 16px 8px 16px 8px;
+  padding: 16px 8px 16px 8px;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  animation: shadow_animation 24s ease-in-out infinite;
+}
+
+.clip-text {
+  overflow: scroll;
+  padding: 0 8px 0 8px;
+}
+
+@keyframes shadow_animation {
+  0%,
+  100% {
+    box-shadow: #c50027 0 0 500px;
+  }
+
+  75% {
+    box-shadow: #e0002d 0 0 500px;
+  }
+
+  50% {
+    box-shadow: #b80025 0 0 500px;
+  }
+
+  25% {
+    box-shadow: #fe0032 0 0 500px;
+  }
+}
+
+.collapsible {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  background-color: black;
+  color: #fe0032;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #fe0032;
+  color: black;
+}
+
+.d-flex {
+  display: flex;
+}
+
+#queryinputs,
+#tags,
+#editorwrapper {
+  display: none;
+  overflow: hidden;
+}
+
+h1,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.requiredBy {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #929292;
+}
+
+input[type="checkbox"] {
+  accent-color: #fe0032;
+}
+
+input[type="number"] {
+  background-color: black;
+  min-width: 64px;
+  text-align: right;
+  color: #fe0032;
+  border: 0;
+  font-family: "Px437_IBM_VGA_8x16";
+  font-size: 16px;
+}
+
+a {
+  cursor: pointer;
+  color: #fe0032;
+}
+
+a:hover {
+  cursor: pointer;
+  color: black;
+  background-color: #fe0032;
+}
+
+button {
+  font-family: "Px437_IBM_VGA_8x16";
+}
+
+x-checkboxselect {
+  font-family: "Px437_IBM_VGA_8x16";
+}
+
+body {
+  background-image: url("./noise.jpg");
+  padding: 0;
+  margin: 0;
+}
+
+.vignette {
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  box-shadow: inset 0 0 500px black;
+}
