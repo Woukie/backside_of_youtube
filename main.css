@@ -11,7 +11,6 @@ html {
 }
 
 .container {
-  width: 1152px;
   height: 672px;
   position: absolute;
   border-image: url("./border.png") 16 8 16 8 fill / 16px 8px 16px 8px;
@@ -22,6 +21,18 @@ html {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   animation: shadow_animation 24s ease-in-out infinite;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1152px;
+  }
+}
+
+@media (max-width: 1252px) {
+  .container {
+    width: calc(100% - 64px);
+  }
 }
 
 .clip-text {
