@@ -101,9 +101,7 @@ function rebuildTagCheckboxes() {
         queries.indexOf(query)
       );
       queryDropdown.setAttribute("value", selectedIndexes.join(","));
-
       queryDropdownChanged();
-      rebuildTagCheckboxes();
     });
   });
 
@@ -173,7 +171,9 @@ function rebuildInputs() {
             .getInputs()
             .find(
               (previousInput) =>
-                previousInput.equals(input) && previousInput.getResultElement()
+                previousInput.equals(input) &&
+                previousInput.getResultElement() &&
+                document.body.contains(previousInput.getResultElement())
             );
           if (duplicateInput) {
             cloned = true;
@@ -209,7 +209,10 @@ function rebuildInputs() {
     });
   });
 
-  toRemove.forEach((element) => element.remove());
+  toRemove.forEach((element) => {
+    element.remove();
+    element = null;
+  });
 
   if (!inputsParent.firstChild) {
     const noneMessage = document.createElement("p");
